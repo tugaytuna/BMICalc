@@ -15,13 +15,14 @@ function BMIHesapla() {
 
   const calculate = () => {
     //check inputs
-    if (age < 2 || age > 120 || gender == 1 || weight < 20 || height < 40)
+    if (age < 5 || age > 120 || gender == 1 || weight < 20 || height < 40)
     {
-      console.log("mistake")
+      alert("Please fill all blanks!")
+      // console.log("mistake")
     }
     else 
     {
-      console.log(age,height,weight,gender)
+      // console.log(age,height,weight,gender)
       const calc = weight / (height * height)
       
       let newCalc = calc * 10000;
@@ -110,7 +111,7 @@ function BMIHesapla() {
       <br></br>
       <button onClick={calculate} className='calcBtn' >Calculate</button>  
 
-      <button onClick={testFonc} id='tempTest'>Test</button>
+      {/* <button onClick={testFonc} id='tempTest'>Test</button> */}
 
       <h1>{bmi} BMI</h1>
 
@@ -118,7 +119,7 @@ function BMIHesapla() {
         <h2 id='resultCateg' className={resultCateg}>{resultCateg}</h2>
       </div>
 
-      <h6>Version 1.1.2</h6>
+      <h6>Version 1.1.3</h6>
       
 
     </div>
