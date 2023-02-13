@@ -8,7 +8,7 @@ import "./style.css"
 function Header() {
 
   const scrollEvent = () => {
-    console.log("outside")
+    
     window.scrollTo({
       top: 400,
       behavior: 'smooth',
