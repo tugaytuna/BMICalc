@@ -11,6 +11,8 @@ function BMIHesapla() {
   
   const [bmi, setBmi] = useState()
   const [resultCateg, setResultCateg] = useState("");
+ 
+
 
 
   const calculate = () => {
@@ -71,6 +73,7 @@ function BMIHesapla() {
 
       setResultCateg(resultCategory);
 
+      
 
     }
         
@@ -119,7 +122,7 @@ function BMIHesapla() {
         <h2 id='resultCateg' className={resultCateg}>{resultCateg}</h2>
       </div>
 
-      <h6>Version 1.1.3</h6>
+      <h6>Version 1.1.4</h6>
       
 
     </div>
