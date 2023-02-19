@@ -2,16 +2,19 @@ import './App.css';
 import BMIHesapla from './Components/BMIHesapla';
 import BMINedir from './Components/BMINedir';
 import Header from './Components/Header';
-import Result from './Components/Result';
+
+import "./Components/style.css"
+
 
 function App() {
   return (
     <div className="App">
-      <Header></Header>
-     <BMIHesapla>
-     </BMIHesapla>
-     {/* <Result></Result> */}
-     <BMINedir></BMINedir>
+      <Header/>
+      <div className='columnAll'>
+      <BMIHesapla/>
+      <BMINedir/>
+      </div>
+      <h6>Version 1.2.1</h6>
     </div>
   );
 }

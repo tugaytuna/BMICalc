@@ -18,7 +18,8 @@ function Header() {
   return (
     <div>
         <nav>
-            <button  className='navBtn'>BMI</button>
+          <h1 className='headerBMI'>BMI Calculation</h1>
+            {/* <button  className='navBtn'>BMI</button> */}
             <button onClick={scrollEvent} className='navBtn'>What's BMI</button>
             {/* <button className='navBtn'>About Us</button> */}
         </nav>

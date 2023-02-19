@@ -1,6 +1,8 @@
 import {useState, useEffect} from 'react'
 import "./style.css"
 
+import bmi_des from './images/bmi_des.png'
+
 
 function BMIHesapla() {
 
@@ -11,6 +13,7 @@ function BMIHesapla() {
   
   const [bmi, setBmi] = useState()
   const [resultCateg, setResultCateg] = useState("");
+  const[descriptonBMIIndex, setDescriptonBMIIndex] = useState("");
  
 
 
@@ -72,7 +75,8 @@ function BMIHesapla() {
       }
 
       setResultCateg(resultCategory);
-
+      // setDescriptonBMIIndex("https://prnt.sc/q3j16GGcSCUJ");
+      setDescriptonBMIIndex(bmi_des)
       
 
     }
@@ -95,7 +99,7 @@ function BMIHesapla() {
   }
 
   return (
-    <div>
+    <div className='calculation'>
       <label>Age: </label>
       <input id='age' onClick={() => {if(age == "0"){setAge("")}}} type={"text"} onChange={(e) => {setAge(e.target.value)}} value={age}></input>
       <br></br>
@@ -107,7 +111,7 @@ function BMIHesapla() {
       <br></br>
       <label>Height</label>
       <input onClick={() => {if(height == 180){setHeight("")}}} onChange={(e) => {setHeight(e.target.value)}} value={height} className='hewe' type={"text"}></input>
-      
+      <br></br>
       <label>Weight</label>
       <input onClick={() => {if(weight == 65){setWeight("")}}} onChange={(e) => {setWeight(e.target.value)}} value={weight}  className='hewe' type={"text"}></input>
 
@@ -122,7 +126,10 @@ function BMIHesapla() {
         <h2 id='resultCateg' className={resultCateg}>{resultCateg}</h2>
       </div>
 
-      <h6>Version 1.1.4</h6>
+      {/* <p>{descriptonBMIIndex}</p> */}
+      <img className='desImage' src={descriptonBMIIndex}></img>
+
+     
       
 
     </div>
