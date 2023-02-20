@@ -15,8 +15,10 @@ function BMIHesapla() {
   const [resultCateg, setResultCateg] = useState("");
   const[descriptonBMIIndex, setDescriptonBMIIndex] = useState("");
  
-
-
+ 
+  useEffect(() => {
+    makeResult();
+  },[bmi])
 
   const calculate = () => {
     //check inputs
@@ -35,55 +37,50 @@ function BMIHesapla() {
 
       setBmi(newCalc)
 
-      makeResult();
+      // makeResult();
       
     }
+  }
 
-    function makeResult(){
-      let resultCategory = "";
+  
+  function makeResult(){
+    let resultCategory = "";
 
-      if (bmi < 16) {
-        resultCategory = "Severe Thinness";
-      }
-      else if (bmi > 16 && bmi < 17)
-      {
-        resultCategory = "Moderate Thinness";
-      }
-      else if (bmi > 17 && bmi < 18.5)
-      {
-        resultCategory = "Mild Thinness";
-      }
-      else if (bmi > 18.5 && bmi < 25)
-      {
-        resultCategory = "Normal";
-      }
-      else if (bmi > 25 && bmi < 30)
-      {
-        resultCategory = "Overweight";
-      }
-      else if (bmi > 30 && bmi < 35)
-      {
-        resultCategory = "Obese Class I";
-      }
-      else if (bmi > 35 && bmi < 40)
-      {
-        resultCategory = "Obese Class II";
-      }
-      else if (bmi > 40)
-      {
-        resultCategory = "Obese Class III";
-      }
-
-      setResultCateg(resultCategory);
-      // setDescriptonBMIIndex("https://prnt.sc/q3j16GGcSCUJ");
-      setDescriptonBMIIndex(bmi_des)
-      
-
+    if (bmi < 16) {
+      resultCategory = "Severe Thinness";
     }
-        
+    else if (bmi > 16 && bmi < 17)
+    {
+      resultCategory = "Moderate Thinness";
+    }
+    else if (bmi > 17 && bmi < 18.5)
+    {
+      resultCategory = "Mild Thinness";
+    }
+    else if (bmi > 18.5 && bmi < 25)
+    {
+      resultCategory = "Normal";
+    }
+    else if (bmi > 25 && bmi < 30)
+    {
+      resultCategory = "Overweight";
+    }
+    else if (bmi > 30 && bmi < 35)
+    {
+      resultCategory = "Obese Class I";
+    }
+    else if (bmi > 35 && bmi < 40)
+    {
+      resultCategory = "Obese Class II";
+    }
+    else if (bmi > 40)
+    {
+      resultCategory = "Obese Class III";
+    }
 
-      
-
+    setResultCateg(resultCategory);
+    // setDescriptonBMIIndex("https://prnt.sc/q3j16GGcSCUJ");
+    setDescriptonBMIIndex(bmi_des)
   }
 
   const testFonc = () => {

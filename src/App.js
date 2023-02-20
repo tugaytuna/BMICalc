@@ -14,7 +14,7 @@ function App() {
       <BMIHesapla/>
       <BMINedir/>
       </div>
-      <h6>Version 1.2.1</h6>
+      <h6>Version 1.2.2</h6>
     </div>
   );
 }
